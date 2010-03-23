@@ -392,7 +392,6 @@ body {
 #container {
   margin: 0;
   padding: 0 3em 0 3em;
-  height: 100%;
   background: white;
   border-right: 3px solid #EEEEEE;
   border-left: 3px solid #EEEEEE;
@@ -408,6 +407,33 @@ body {
   font-size: 2.25em;
   font-weight: bold;
   color: #292929;
+}
+
+#location {
+  margin: 2em;
+  text-align: center;
+}
+#location img {
+  border-color: #b2b2b2;
+  border-style: solid;
+}
+#location h2 {
+  font-size: 1.50em;
+}
+
+#members {
+  margin: 2em;
+  text-align: center;
+}
+#members img {
+  border-color: #b2b2b2;
+  border-style: solid;
+}
+#members h2 {
+  font-size: 1.50em;
+}
+#members ul {
+  list-style: none;
 }
 
 #footer {

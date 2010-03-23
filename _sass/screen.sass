@@ -1,0 +1,69 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset.sass
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base.sass
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+// Import the non-default scaffolding module.
+@import blueprint/scaffolding.sass
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+// +blueprint
+
+//Recommended Blueprint configuration with scoping and semantic layout:
++blueprint-scaffolding("body.bp")
+body.bp
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+form.bp
+  +blueprint-form
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body.three-col
+  #container
+    +container
+  #header, #footer
+    +column(!blueprint_grid_columns)
+  #content
+    +column(!blueprint_grid_columns, true)
+
+
+// reno.rb adds
+body
+  margin: 0
+  padding: 0
+  background = !site_background
+  color = !content_color
+  
+#container
+  margin: 0
+  padding: 0 3em 0 3em
+  height: 100%
+  background = !container_background
+  border:
+    right = !container_border
+    left = !container_border
+  
+#header
+  margin: 2em 0 2em 0
+  background: url('/images/renorb-logo-web.png') no-repeat top center
+  text-align: center
+  
+  h1
+    margin: 150px 0 0 0
+    font-size: 2.25em
+    font-weight: bold
+    color = !content_color
+    
+#footer
+  padding: 2em 0 2em 0
+  
+#content
+  min-height: 500px
+  background = !content_background
+  border = !content_border
+  color = !content_color

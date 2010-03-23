@@ -5,5 +5,6 @@ css_dir = "stylesheets"
 sass_dir = "_sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
+line_comments = false
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

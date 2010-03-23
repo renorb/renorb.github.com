@@ -11,14 +11,11 @@
 // +blueprint
 
 //Recommended Blueprint configuration with scoping and semantic layout:
-+blueprint-scaffolding("body.bp")
 body.bp
   +blueprint-typography(true)
   +blueprint-utilities
-  +blueprint-debug
   +blueprint-interaction
-  // Remove the scaffolding when you're ready to start doing visual design.
-  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+
 form.bp
   +blueprint-form
 
@@ -30,9 +27,15 @@ body.three-col
     +column(!blueprint_grid_columns)
   #content
     +column(!blueprint_grid_columns, true)
+  #members
+    +container
+    li
+      +column(12)
+    li.last
+      +column(11,true)
 
-
-// reno.rb adds
+// Non-column specific styles: do not mess with right and left padding/margin
+// here as it will bork the columns.
 body
   margin: 0
   padding: 0
@@ -41,7 +44,7 @@ body
   
 #container
   margin: 0
-  padding: 0 3em 0 3em
+  padding: 0
   background = !container_background
   border:
     right = !container_border
@@ -58,38 +61,78 @@ body
     font-weight: bold
     color = !content_color
 
-#location
-  margin: 2em
-  text-align: center
-    
-  img
-    border:
-      color= !site_background
-      style: solid
-
-  h2
-    font-size: 1.50em
-
-#members
-  margin: 2em
-  text-align: center
-
-  img
-    border:
-      color= !site_background
-      style: solid
-
-  h2
-    font-size: 1.50em
-  
-  ul
-    list-style: none
-    
 #footer
   padding: 2em 0 2em 0
   
 #content
   min-height: 500px
+  padding: 1em 0 0 0
   background = !content_background
-  border = !content_border
   color = !content_color
+
+  h2
+    margin: 0.125em
+    padding: 0em
+    font-weight: bold
+    
+  h3
+    margin: 0.25em
+    padding: 0em
+
+  #meeting-time
+    padding: 0 0 1em 0
+    text-align: center
+
+  #location
+    margin: 1em
+    text-align: center
+
+    img
+      margin: 1em 0 0 0
+      border:
+        width: 1px
+        color = !site_background
+        style: solid
+
+  #members
+    margin: 3.5em 0 2.5em 0
+    text-align: center
+
+    h2
+      margin-bottom: 1.5em
+
+    img
+      border:
+        color= !site_background
+        style: solid
+
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+
+    li
+      +border
+      margin: 0
+      padding: 0.5em 0 1em 0
+      text-align: center
+
+    li.last
+      border: none
+
+  #joinus
+    margin: 3.5em 0 2.5em 0
+    text-align: center
+
+    h2
+      margin-bottom: 1.5em
+      
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+
+    li
+      margin: 0 0 0.5em 0
+      padding: 0
+      font-size: 1.5em

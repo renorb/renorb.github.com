@@ -5,7 +5,7 @@ body.bp {
   margin: 0px -8px 16px 0;
   padding: 0;
 }
-html>body.bp p code {
+html > body.bp p code {
   *white-space: normal;
 }
 body.bp .container {
@@ -31,19 +31,19 @@ body.bp textarea {
 }
 body.bp input.text {
   margin: 0.5em 0;
-  background-color: #fff;
-  border: 1px solid #bbb;
+  background-color: white;
+  border: 1px solid #bbbbbb;
 }
 body.bp input.text:focus {
-  border: 1px solid #666;
+  border: 1px solid #666666;
 }
 body.bp input.title {
   margin: 0.5em 0;
-  background-color: #fff;
-  border: 1px solid #bbb;
+  background-color: white;
+  border: 1px solid #bbbbbb;
 }
 body.bp input.title:focus {
-  border: 1px solid #666;
+  border: 1px solid #666666;
 }
 body.bp input.checkbox {
   position: relative;

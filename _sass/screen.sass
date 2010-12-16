@@ -27,7 +27,7 @@ body.three-col
     +column(!blueprint_grid_columns)
   #content
     +column(!blueprint_grid_columns, true)
-  #members
+  .members
     +container
     li
       +column(12)
@@ -75,7 +75,12 @@ body
   padding: 1em 0 0 0
   background = !content_background
   color = !content_color
+  text-align: center
 
+  hr  
+    width: 90%
+    border: 1px solid #eeeeee
+    
   h2
     margin: 0.125em
     padding: 0em
@@ -84,13 +89,21 @@ body
   h3
     margin: 0.25em
     padding: 0em
-
-  #meeting-time
+    
+  .title
+    font-weight: bold
+    
+  .summary,
+  .event
+    margin: 0 0 3em 0
     padding: 0 0 1em 0
-    text-align: center
-
-  #location
-    margin: 1em
+    
+  .summary
+    text-align: left
+    width: 50%
+    margin: auto
+    
+  .event
     text-align: center
 
     img
@@ -100,7 +113,11 @@ body
         color = !site_background
         style: solid
 
-  #members
+  .location
+    margin: 2em 0 1em 0
+    text-align: center
+
+  .members
     margin: 3.5em 0 2.5em 0
     text-align: center
 

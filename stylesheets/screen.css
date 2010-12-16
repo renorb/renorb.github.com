@@ -1,54 +1,118 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 100.01%;
+}
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+a img {
+  border: none;
+}
+
 body.bp {
   line-height: 1.5;
-  font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%;
 }
-body.bp h1 {
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
   font-weight: normal;
   color: #222222;
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.5em;
 }
-body.bp h1 img {
+body.bp h1 img, body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img {
   margin: 0;
 }
+body.bp h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.50em;
+}
 body.bp h2 {
-  font-weight: normal;
-  color: #222222;
   font-size: 2em;
   margin-bottom: 0.75em;
 }
 body.bp h3 {
-  font-weight: normal;
-  color: #222222;
   font-size: 1.5em;
   line-height: 1;
-  margin-bottom: 1em;
+  margin-bottom: 1.00em;
 }
 body.bp h4 {
-  font-weight: normal;
-  color: #222222;
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em;
 }
 body.bp h5 {
-  font-weight: normal;
-  color: #222222;
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.50em;
 }
 body.bp h6 {
-  font-weight: normal;
-  color: #222222;
   font-size: 1em;
   font-weight: bold;
-}
-body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img {
-  margin: 0;
 }
 body.bp p {
   margin: 0 0 1.5em;
@@ -83,7 +147,7 @@ body.bp a:active {
 }
 body.bp blockquote {
   margin: 1.5em;
-  color: #666;
+  color: #666666;
   font-style: italic;
 }
 body.bp strong {
@@ -100,21 +164,21 @@ body.bp sup, body.bp sub {
   line-height: 0;
 }
 body.bp abbr, body.bp acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #666666;
 }
 body.bp address {
   margin: 0 0 1.5em;
   font-style: italic;
 }
 body.bp del {
-  color: #666;
+  color: #666666;
 }
 body.bp pre {
   margin: 1.5em 0;
   white-space: pre;
 }
 body.bp pre, body.bp code, body.bp tt {
-  font: 1em 'andale mono', 'lucida console', monospace;
+  font: 1em "andale mono", "lucida console", monospace;
   line-height: 1.5;
 }
 body.bp li ul, body.bp li ol {
@@ -159,7 +223,7 @@ body.bp tfoot {
   font-style: italic;
 }
 body.bp caption {
-  background: #eee;
+  background: #eeeeee;
 }
 body.bp .quiet {
   color: #666666;
@@ -175,13 +239,10 @@ body.bp .nowrap {
 }
 body.bp .clearfix {
   overflow: hidden;
-  display: inline-block;
-}
-body.bp .clearfix {
-  display: block;
+  *zoom: 1;
 }
 body.bp .small {
-  font-size: .8em;
+  font-size: 0.8em;
   margin-bottom: 1.875em;
   line-height: 1.875em;
 }
@@ -207,7 +268,7 @@ body.bp .bottom {
   padding-bottom: 0;
 }
 body.bp .error {
-  padding: .8em;
+  padding: 0.8em;
   margin-bottom: 1em;
   border: 2px solid #dddddd;
   background: #fbe3e4;
@@ -218,7 +279,7 @@ body.bp .error a {
   color: #8a1f11;
 }
 body.bp .notice {
-  padding: .8em;
+  padding: 0.8em;
   margin-bottom: 1em;
   border: 2px solid #dddddd;
   background: #fff6bf;
@@ -229,7 +290,7 @@ body.bp .notice a {
   color: #514721;
 }
 body.bp .success {
-  padding: .8em;
+  padding: 0.8em;
   margin-bottom: 1em;
   border: 2px solid #dddddd;
   background: #e6efc2;
@@ -265,16 +326,15 @@ form.bp legend {
   font-weight: bold;
   font-size: 1.2em;
 }
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password] {
+form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
   margin: 0.5em 0;
-  background-color: #fff;
+  background-color: white;
   padding: 5px;
 }
 form.bp input.title {
   font-size: 1.5em;
 }
-form.bp input[type=checkbox], form.bp input.checkbox,
-form.bp input[type=radio], form.bp input.radio {
+form.bp input[type=checkbox], form.bp input.checkbox, form.bp input[type=radio], form.bp input.radio {
   position: relative;
   top: 0.25em;
 }
@@ -288,17 +348,15 @@ form.bp select {
 form.bp fieldset {
   border: 1px solid #cccccc;
 }
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password],
-form.bp textarea,
-form.bp select {
+form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password],
+form.bp textarea, form.bp select {
   border: 1px solid #bbbbbb;
 }
-form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
-form.bp textarea:focus,
-form.bp select:focus {
+form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=email]:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
+form.bp textarea:focus, form.bp select:focus {
   border: 1px solid #666666;
 }
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password] {
+form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
   width: 300px;
 }
 form.bp textarea {
@@ -310,10 +368,7 @@ body.three-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
-  display: inline-block;
-}
-body.three-col #container {
-  display: block;
+  *zoom: 1;
 }
 body.three-col #header, body.three-col #footer {
   display: inline;
@@ -333,31 +388,28 @@ body.three-col #content {
 * html body.three-col #content {
   overflow-x: hidden;
 }
-body.three-col #members {
+body.three-col .members {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
-  display: inline-block;
+  *zoom: 1;
 }
-body.three-col #members {
-  display: block;
-}
-body.three-col #members li {
+body.three-col .members li {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 470px;
 }
-* html body.three-col #members li {
+* html body.three-col .members li {
   overflow-x: hidden;
 }
-body.three-col #members li.last {
+body.three-col .members li.last {
   display: inline;
   float: left;
   margin-right: 0;
   width: 430px;
 }
-* html body.three-col #members li.last {
+* html body.three-col .members li.last {
   overflow-x: hidden;
 }
 
@@ -382,7 +434,7 @@ body {
 }
 #header #renorb {
   height: 150px;
-  background: url('/images/renorb-logo-web.png') no-repeat top center;
+  background: url("/images/renorb-logo-web.png") no-repeat top center;
   text-indent: -9000px;
 }
 #header h1 {
@@ -403,6 +455,11 @@ body {
   padding: 1em 0 0 0;
   background: white;
   color: #292929;
+  text-align: center;
+}
+#content hr {
+  width: 90%;
+  border: 1px solid #eeeeee;
 }
 #content h2 {
   margin: 0.125em;
@@ -413,37 +470,49 @@ body {
   margin: 0.25em;
   padding: 0em;
 }
-#content #meeting-time {
+#content .title {
+  font-weight: bold;
+}
+#content .summary,
+#content .event {
+  margin: 0 0 3em 0;
   padding: 0 0 1em 0;
+}
+#content .summary {
+  text-align: left;
+  width: 50%;
+  margin: auto;
+}
+#content .event {
   text-align: center;
 }
-#content #location {
-  margin: 1em;
-  text-align: center;
-}
-#content #location img {
+#content .event img {
   margin: 1em 0 0 0;
   border-width: 1px;
   border-color: #c3c3c3;
   border-style: solid;
 }
-#content #members {
+#content .location {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+#content .members {
   margin: 3.5em 0 2.5em 0;
   text-align: center;
 }
-#content #members h2 {
+#content .members h2 {
   margin-bottom: 1.5em;
 }
-#content #members img {
+#content .members img {
   border-color: #c3c3c3;
   border-style: solid;
 }
-#content #members ul {
+#content .members ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#content #members li {
+#content .members li {
   padding-right: 4px;
   margin-right: 5px;
   border-right: 1px solid #eeeeee;
@@ -451,7 +520,7 @@ body {
   padding: 0.5em 0 1em 0;
   text-align: center;
 }
-#content #members li.last {
+#content .members li.last {
   border: none;
 }
 #content #joinus {

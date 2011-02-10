@@ -33,6 +33,12 @@ body.three-col
       +column(12)
     li.last
       +column(11,true)
+  .presentations
+    +container
+    li
+      +column(12)
+    li.last
+      +column(11,true)
 
 // Non-column specific styles: do not mess with right and left padding/margin
 // here as it will bork the columns.
@@ -118,6 +124,32 @@ body
     text-align: center
 
   .members
+    margin: 3.5em 0 2.5em 0
+    text-align: center
+
+    h2
+      margin-bottom: 1.5em
+
+    img
+      border:
+        color= !site_background
+        style: solid
+
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+
+    li
+      +border
+      margin: 0
+      padding: 0.5em 0 1em 0
+      text-align: center
+
+    li.last
+      border: none
+
+  .presentations
     margin: 3.5em 0 2.5em 0
     text-align: center
 

@@ -412,6 +412,30 @@ body.three-col .members li.last {
 * html body.three-col .members li.last {
   overflow-x: hidden;
 }
+body.three-col .presentations {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+body.three-col .presentations li {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+* html body.three-col .presentations li {
+  overflow-x: hidden;
+}
+body.three-col .presentations li.last {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 430px;
+}
+* html body.three-col .presentations li.last {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -521,6 +545,33 @@ body {
   text-align: center;
 }
 #content .members li.last {
+  border: none;
+}
+#content .presentations {
+  margin: 3.5em 0 2.5em 0;
+  text-align: center;
+}
+#content .presentations h2 {
+  margin-bottom: 1.5em;
+}
+#content .presentations img {
+  border-color: #c3c3c3;
+  border-style: solid;
+}
+#content .presentations ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#content .presentations li {
+  padding-right: 4px;
+  margin-right: 5px;
+  border-right: 1px solid #eeeeee;
+  margin: 0;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+}
+#content .presentations li.last {
   border: none;
 }
 #content #joinus {

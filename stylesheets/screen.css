@@ -481,10 +481,25 @@ body {
   margin: 3em 0 1em 0;
   padding: 0 0 1em 0;
 }
+#content .description {
+  font-size: 1.25em;
+}
+#content .description {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
 #content .summary {
   text-align: left;
   width: 50%;
   margin: auto;
+  font-size: 1.5em;
+}
+#content .summary ul {
+  list-style: none;
+}
+#content .summary ul li {
+  list-style: none;
 }
 #content .event {
   text-align: center;

@@ -26,8 +26,24 @@ body.bp img {
 body.bp fieldset {
   padding-top: 0;
 }
+body.bp legend {
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+  margin-left: -0.5em;
+}
+body.bp fieldset, body.bp #IE8#HACK {
+  padding-top: 1.4em;
+}
+body.bp legend, body.bp #IE8#HACK {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 body.bp textarea {
   overflow: auto;
+}
+body.bp label {
+  position: relative;
+  top: -0.25em;
 }
 body.bp input.text {
   margin: 0.5em 0;

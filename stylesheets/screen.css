@@ -1,21 +1,16 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
 html {
-  font-size: 100.01%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-pre, a, abbr, acronym, address, code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
+div, span, object, iframe, p,
+pre, a, abbr, acronym, address,
+code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend,
+caption, tbody, tfoot, thead, tr {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,17 +19,13 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
 }
 
 blockquote, q {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
   quotes: "" "";
 }
 blockquote:before, blockquote:after, q:before, q:after {
@@ -42,28 +33,13 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 th, td, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
+  float: none !important;
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
 table {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
@@ -117,13 +93,13 @@ body.bp h6 {
 body.bp p {
   margin: 0 0 1.5em;
 }
-body.bp p img.left {
+body.bp p .left {
   display: inline;
   float: left;
   margin: 1.5em 1.5em 1.5em 0;
   padding: 0;
 }
-body.bp p img.right {
+body.bp p .right {
   display: inline;
   float: right;
   margin: 1.5em 0 1.5em 1.5em;
@@ -131,34 +107,30 @@ body.bp p img.right {
 }
 body.bp a {
   text-decoration: underline;
-  color: #000099;
+  color: #0066cc;
 }
 body.bp a:visited {
-  color: #000066;
+  color: #004c99;
 }
 body.bp a:focus {
-  color: black;
+  color: #0099ff;
 }
 body.bp a:hover {
-  color: black;
+  color: #0099ff;
 }
 body.bp a:active {
-  color: #cc0099;
+  color: #bf00ff;
 }
 body.bp blockquote {
   margin: 1.5em;
   color: #666666;
   font-style: italic;
 }
-body.bp strong {
+body.bp strong, body.bp dfn {
   font-weight: bold;
 }
-body.bp em {
+body.bp em, body.bp dfn {
   font-style: italic;
-}
-body.bp dfn {
-  font-style: italic;
-  font-weight: bold;
 }
 body.bp sup, body.bp sub {
   line-height: 0;
@@ -186,7 +158,7 @@ body.bp li ul, body.bp li ol {
 }
 body.bp ul, body.bp ol {
   margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em;
+  padding-left: 1.5em;
 }
 body.bp ul {
   list-style-type: disc;
@@ -216,7 +188,8 @@ body.bp thead th {
 body.bp th, body.bp td, body.bp caption {
   padding: 4px 10px 4px 5px;
 }
-body.bp tr.even td {
+body.bp table.striped tr:nth-child(even) td,
+body.bp table tr.even td {
   background: #e5ecf9;
 }
 body.bp tfoot {
@@ -267,21 +240,20 @@ body.bp .bottom {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-body.bp .error {
+body.bp .feedback, body.bp .error, body.bp .alert, body.bp .notice, body.bp .success, body.bp .info {
   padding: 0.8em;
   margin-bottom: 1em;
   border: 2px solid #dddddd;
+}
+body.bp .error, body.bp .alert {
   background: #fbe3e4;
   color: #8a1f11;
   border-color: #fbc2c4;
 }
-body.bp .error a {
+body.bp .error a, body.bp .alert a {
   color: #8a1f11;
 }
 body.bp .notice {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
   background: #fff6bf;
   color: #514721;
   border-color: #ffd324;
@@ -290,15 +262,20 @@ body.bp .notice a {
   color: #514721;
 }
 body.bp .success {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
   background: #e6efc2;
   color: #264409;
   border-color: #c6d880;
 }
 body.bp .success a {
   color: #264409;
+}
+body.bp .info {
+  background: #d5edf8;
+  color: #205791;
+  border-color: #92cae4;
+}
+body.bp .info a {
+  color: #205791;
 }
 body.bp .hide {
   display: none;
@@ -334,10 +311,6 @@ form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp inpu
 form.bp input.title {
   font-size: 1.5em;
 }
-form.bp input[type=checkbox], form.bp input.checkbox, form.bp input[type=radio], form.bp input.radio {
-  position: relative;
-  top: 0.25em;
-}
 form.bp textarea {
   margin: 0.5em 0;
   padding: 5px;
@@ -349,12 +322,18 @@ form.bp fieldset {
   border: 1px solid #cccccc;
 }
 form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password],
-form.bp textarea, form.bp select {
+form.bp textarea {
+  background-color: #fff;
   border: 1px solid #bbbbbb;
 }
 form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=email]:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
-form.bp textarea:focus, form.bp select:focus {
-  border: 1px solid #666666;
+form.bp textarea:focus {
+  border-color: #666666;
+}
+form.bp select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
 }
 form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
   width: 300px;
@@ -448,8 +427,8 @@ body {
   margin: 0;
   padding: 0;
   background: white;
-  border-right: 3px solid #EEEEEE;
-  border-left: 3px solid #EEEEEE;
+  background-right: "3px solid #EEEEEE";
+  background-left: "3px solid #EEEEEE";
 }
 
 #header {
@@ -539,7 +518,7 @@ body {
 #content .members li {
   padding-right: 4px;
   margin-right: 5px;
-  border-right: 1px solid #eeeeee;
+  border-right: 1px solid #dddddd;
   margin: 0;
   padding: 0.5em 0 1em 0;
   text-align: center;
@@ -566,7 +545,7 @@ body {
 #content .presentations li {
   padding-right: 4px;
   margin-right: 5px;
-  border-right: 1px solid #eeeeee;
+  border-right: 1px solid #dddddd;
   margin: 0;
   padding: 0.5em 0 1em 0;
   text-align: center;
